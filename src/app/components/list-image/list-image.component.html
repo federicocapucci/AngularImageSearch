@@ -1,0 +1,61 @@
+<app-spinner *ngIf="isLoading"></app-spinner>
+<div class="d-flex justify-content-center mt-2" *ngIf="imageList.length != 0">
+  <ul class="pagination pagination-lg">
+    <li class="page-item" [ngClass]="{'disabled' : currentPage == 1}">
+      <a class="page-link" (click)="movePage(-1)">&laquo; Prev</a>
+    </li>
+    <li class="page-item" >
+      <a class="page-link" >
+        <input  class="page" type="number"  min="1" [max]="totalPages" [value]="currentPage" [(ngModel)]="currentPage" (keydown.enter)="movePage(0)">of {{totalPages}}</a>
+    </li>
+    <li class="page-item" [ngClass]="{'disabled' : currentPage == totalPages}">
+      <a class="page-link" (click)="movePage(+1)">Next &raquo;</a>
+    </li>
+  </ul>
+</div>
+
+<div class="row row-cols-1 row-cols-md-4 g-4">
+  <div class="col" *ngFor="let image of imageList">
+    <div class="card">
+      <a [href]="image.pageURL" target="_blank">
+        <img [src]="image.largeImageURL" class="card-img-top" [alt]="image.tags">
+      </a>
+      <div class="card-body">
+        <div class="d-flex justify-content-between">
+          <div> <b>By:</b>
+            <a [href]='"https://pixabay.com/users/"+image.user' target="_blank" class="by">{{image.user}}</a>
+          </div>
+          <div>
+            <span class="badge rounded-pill text-bg-primary mb-3">
+              <i class="fa-solid fa-thumbs-up"></i> {{image.likes}}
+            </span>
+            <span class="badge rounded-pill text-bg-primary mb-3">
+              <i class="fa-solid fa-eye"></i> {{image.views}}
+            </span>
+          </div>
+        </div>
+        <div class="mb-2">
+          <div> <b>tags:</b></div>
+          <a (click)="searchFromTag(tag)" href="#" class="tags" *ngFor="let tag of image.tags.split(', ')">{{tag}}</a>
+
+        </div>
+        <a [href]="image.largeImageURL" target="_blank" class="btn btn-primary">See Fullscreen</a>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="d-flex justify-content-center mt-2" *ngIf="imageList.length != 0">
+  <ul class="pagination pagination-lg">
+    <li class="page-item" [ngClass]="{'disabled' : currentPage == 1}">
+      <a class="page-link" (click)="movePage(-1)">&laquo; Prev</a>
+    </li>
+    <li class="page-item" >
+      <a class="page-link" >
+        <input  class="page" type="number"  min="1" [max]="totalPages" [value]="currentPage" [(ngModel)]="currentPage" (keydown.enter)="movePage(0)">of {{totalPages}}</a>
+    </li>
+    <li class="page-item" [ngClass]="{'disabled' : currentPage == totalPages}">
+      <a class="page-link" (click)="movePage(+1)">Next &raquo;</a>
+    </li>
+  </ul>
+</div>
+<div>

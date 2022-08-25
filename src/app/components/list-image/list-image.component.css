@@ -1,0 +1,67 @@
+img {
+  height: 15vw;
+  object-fit: cover;
+}
+.btn {
+  width: 100%;
+}
+
+.card-text {
+  font-size: 0.8rem;
+}
+
+.badge {
+  max-height: 22px;
+  font-size: 0.8rem;
+  margin-left: 3px;
+}
+
+.by {
+  font-size: 0.8rem;
+  margin-right: 3px;
+  margin-left: 3px;
+}
+
+.tags {
+  font-size: 0.6rem;
+  margin-right: 3px;
+  font-weight: 800;
+  margin-left: 3px;
+}
+
+ul {
+  cursor: pointer;
+}
+
+input {
+    font-size: 1.3rem;
+    outline: none !important ;
+  border: none !important ;  
+  width: 25px !important ;
+  height: 28px !important ;
+  color: #eb6864;
+  text-align: center; 
+  margin-right: 2px;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+@media (max-width: 1200px) {
+  .badge {
+    max-height: 20px;
+    font-size: 0.6rem;
+  }
+}
+
+@media (max-width: 768px) {
+  img {
+    height: 60vw;
+  }
+  .badge {
+    font-size: 0.8rem;
+  }
+}
