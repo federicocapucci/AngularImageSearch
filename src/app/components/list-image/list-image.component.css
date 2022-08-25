@@ -69,4 +69,12 @@ input::-webkit-inner-spin-button {
   .badge {
     font-size: 0.8rem;
   }
+
+  li a, a input{
+    font-size: 0.8rem;
+  }
+  input {       
+  width: 25px !important ;
+  height: 18px !important ;  
+}
 }

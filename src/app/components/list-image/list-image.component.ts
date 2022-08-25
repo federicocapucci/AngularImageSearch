@@ -17,8 +17,7 @@ export class ListImageComponent implements OnInit {
   totalPages :number = 0;
 
   constructor(private _imageService: ImageService) {
-    this.subscription = this._imageService.getSearchTerm().subscribe(data => {
-      console.log(data);
+    this.subscription = this._imageService.getSearchTerm().subscribe(data => {      
       this.totalPages = 1
       this.searchTerm = data;
       this.getImages()
@@ -34,7 +33,7 @@ export class ListImageComponent implements OnInit {
 
     this._imageService.getImages(this.searchTerm, this.imagesPerPage, this.currentPage).subscribe({
        next: (resultsData) => {        
-        console.log(resultsData)
+        
         if(resultsData.hits.length == 0){
           this.isLoading = false;
           this._imageService.setError('Oops, we could not find any results for "' + this.searchTerm + '"')
@@ -43,7 +42,7 @@ export class ListImageComponent implements OnInit {
         this.isLoading = false;
         this.totalPages  = this.calculatePages(resultsData.totalHits);
         this.imageList = resultsData.hits;
-        console.log(this.imageList);
+        
       },
       error: (error) => {
         this.isLoading = false;

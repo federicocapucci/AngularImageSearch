@@ -10,19 +10,19 @@ export class SearchImageComponent implements OnInit {
 
  searchTerm: string = '';
  placeholdersStrings : string[] = [
-  "Search anything, like 'Kitties'",
-  "Search anything, like 'Puppies'",
-  "Search anything, like 'Forest'",
-  "Search anything, like 'Beaches'",
-  "Search anything, like 'Flags'",
-  "Search anything, like 'Flowers'",
-  "Search anything, like 'Romantic'",
-  "Search anything, like 'Sepia'",
-  "Search anything, like 'Nature'",
-  "Search anything, like 'Rome'",
-  "Search anything, like 'USA'",
-  "Search anything, like 'Cartoons'",
-  "Search anything, like 'LOL'",
+  "Try something, like 'Kittens'",
+  "Try something, like 'Puppies'",
+  "Try something, like 'Forest'",
+  "Try something, like 'Beaches'",
+  "Try something, like 'Flags'",
+  "Try something, like 'Flowers'",
+  "Try something, like 'Romantic'",
+  "Try something, like 'Sepia'",
+  "Try something, like 'Nature'",
+  "Try something, like 'Rome'",
+  "Try something, like 'USA'",
+  "Try something, like 'Cartoons'",
+  "Try something, like 'LOL'",
  ];
  
  pickedText : string = this.placeholder()

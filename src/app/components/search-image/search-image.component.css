@@ -6,3 +6,17 @@
 .pix{
     width:20px;
 } 
+
+
+@media (max-width: 768px) {
+
+    input{
+        font-size: 1rem;
+    }
+    
+    button{
+        font-size: 1rem;
+    }
+
+  }
+  
