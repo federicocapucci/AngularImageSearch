@@ -1,4 +1,13 @@
 # AngularImageSearch
+An images search webapp created using Angular and the PixaBay API.
+
+<h4>Desktop View</h4>
+<a href="https://ibb.co/Qb66MJJ"><img src="https://i.ibb.co/ZLhhxff/desktop.png" alt="desktop" border="0"></a>
+
+
+<h4>Mobile View</h4>
+<a href="https://ibb.co/B6D4RMM"><img src="https://i.ibb.co/pKDWpFF/mobile.png" alt="mobile" border="0"></a>
+
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 14.1.1.
 
