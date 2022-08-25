@@ -6,6 +6,11 @@ img {
   width: 100%;
 }
 
+.results{
+    color: rgb(90,90,90);
+    font-size: 1.4rem;    
+}
+
 .card-text {
   font-size: 0.8rem;
 }
@@ -17,7 +22,7 @@ img {
 }
 
 .by {
-  font-size: 0.8rem;
+  font-size: 0.8rem; 
   margin-right: 3px;
   margin-left: 3px;
 }
